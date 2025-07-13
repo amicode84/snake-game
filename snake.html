@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی مار | Snake Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        #game-board {
+            display: inline-block;
+            background-color: #1e08e2;
+            border: 3px solid #000;
+            margin-top: 20px;
+        }
+        #score {
+            font-size: 24px;
+            margin: 10px;
+            color: #333;
+        }
+        #restart {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #restart:hover {
+            background-color: #45a049;
+        }
+        #mobile-controls {
+            margin-top: 20px;
+            display: none; /* ابتدا مخفی است (برای موبایل فعال می‌شود) */
+        }
+        #mobile-controls button {
+            padding: 15px;
+            font-size: 20px;
+            margin: 5px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            #mobile-controls {
+                display: block; /* it display  in mobile*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>(Snake game)</h1>
+    <div id="score">score: 0</div>
+    <canvas id="game-board" width="400" height="400"></canvas>
+    <div>
+        <button id="restart">new game</button>
+    </div>
+    <!-- دکمه‌های کنترل لمسی (برای موبایل) -->
+    <div id="mobile-controls">
+        <button id="up">↑</button><br>
+        <button id="left">←</button>
+        <button id="right">→</button><br>
+        <button id="down">↓</button>
+    </div>
+    <!-- لینک به فایل جاوااسکریپت -->
+    <script src="snake.js"></script>
+</body>
+</html>
